@@ -130,6 +130,7 @@ inline bool isDateFormat(std::string x) {
 }
 
 inline Rcpp::RObject makeCol(CellType type, int n) {
+  Rcpp::warning("This column is %s type!", cellTypeDesc(type));
   switch(type) {
   case CELL_BLANK:
     return R_NilValue;
