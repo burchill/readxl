@@ -173,6 +173,8 @@ public:
 
     // Initialise columns
     int n = nrow_ - nskip;
+    Rcpp::warning("nskip = %d", nskip);
+    Rcpp::warning("n = %d", n);
     Rcpp::List cols(ncol_);
     for (int j = 0; j < ncol_; ++j) {
       cols[j] = makeCol(types[j], n);
